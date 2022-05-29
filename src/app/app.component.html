@@ -1,0 +1,140 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+<style>
+  :host {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 14px;
+    color: #333;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+</style>
+
+<div class="toolbar"
+(click)="checkPlanet()">
+  <p>SWAPI TEST</p>
+</div>
+<div class = "container">
+  <button (click)="checkPlanet()" id="hider">Show</button>
+  <div *ngIf="response" class = "planet-card">
+    <p class = "planet">{{ response.results[0].name }}</p>
+    <p >Диаметр:{{ response.results[0].diameter }}</p>
+    <p >Период вращения:{{ response.results[0].rotation_period }}</p>
+    <p >Климат:{{ response.results[0].climate }}</p>
+    <p >Численность:{{ response.results[0].population }}</p>
+    <p>Жители:</p>
+    <div *ngIf="asd" class = "people-card"></div>
+     <p>{{ this.asd.results[0].name }}</p>
+     <p>{{ this.asd.results[1].name }}</p>
+     <p>{{ this.asd.results[3].name }}</p>
+     <p>{{ this.asd.results[5].name }}</p>
+     <p>{{ this.asd.results[6].name }}</p>
+     <p>{{ this.asd.results[7].name }}</p>
+     
+  </div>
+  <div *ngIf="response" class = "planet-card">
+    <p class = "planet">{{ response.results[1].name }}</p>
+    <p >Диаметр:{{ response.results[1].diameter }}</p>
+    <p >Период вращения:{{ response.results[1].rotation_period }}</p>
+    <p >Климат:{{ response.results[1].climate }}</p>
+    <p >Численность:{{ response.results[1].population }}</p>
+    <p>Жители:</p>
+    <div *ngIf="asd" class = "people-card"></div>
+     <p>{{ this.asd.results[4].name }}</p>
+  </div>
+  <div *ngIf="response" class = "planet-card">
+    <p class = "planet">{{ response.results[2].name }}</p>
+    <p >Диаметр:{{ response.results[2].diameter }}</p>
+    <p >Период вращения:{{ response.results[2].rotation_period }}</p>
+    <p >Климат:{{ response.results[2].climate }}</p>
+    <p >Численность:{{ response.results[2].population }}</p>
+    <p>Жители:</p>
+    <div *ngIf="asd" class = "people-card"></div>
+     <p>{{ this.asd.results[3].name }}</p>
+     <p>{{ this.asd.results[1].name }}</p>
+     <p>{{ this.asd.results[8].name }}</p>
+     <p>{{ this.asd.results[5].name }}</p>
+     <p>{{ this.asd.results[9].name }}</p>
+     
+  </div>
+  <div *ngIf="response" class = "planet-card">
+    <p class = "planet">{{ response.results[3].name }}</p>
+    <p >Диаметр:{{ response.results[3].diameter }}</p>
+    <p >Период вращения:{{ response.results[3].rotation_period }}</p>
+    <p >Климат:{{ response.results[3].climate }}</p>
+    <p >Численность:{{ response.results[3].population }}</p>
+    <p>Жители:</p>
+    <div *ngIf="asd" class = "people-card"></div>
+     <p>{{ this.asd.results[0].name }}</p>
+     <p>{{ this.asd.results[1].name }}</p>
+     <p>{{ this.asd.results[2].name }}</p>
+     <p>{{ this.asd.results[3].name }}</p>
+     <p>{{ this.asd.results[4].name }}</p>
+     <p>{{ this.asd.results[5].name }}</p>
+     
+  </div>
+  <div *ngIf="response" class = "planet-card">
+    <p class = "planet">{{ response.results[4].name }}</p>
+    <p >Диаметр:{{ response.results[4].diameter }}</p>
+    <p >Период вращения:{{ response.results[4].rotation_period }}</p>
+    <p >Климат:{{ response.results[4].climate }}</p>
+    <p >Численность:{{ response.results[4].population }}</p>
+    <p>Жители:</p>
+    <div *ngIf="asd" class = "people-card"></div>
+     <p>{{ this.asd.results[0].name }}</p>
+     <p>{{ this.asd.results[1].name }}</p>
+     <p>{{ this.asd.results[2].name }}</p>
+     <p>{{ this.asd.results[3].name }}</p>
+     <p>{{ this.asd.results[4].name }}</p>
+     <p>{{ this.asd.results[5].name }}</p>
+     
+  </div>
+  <div *ngIf="response" class = "planet-card">
+    <p class = "planet">{{ response.results[5].name }}</p>
+    <p >Диаметр:{{ response.results[5].diameter }}</p>
+    <p >Период вращения:{{ response.results[5].rotation_period }}</p>
+    <p >Климат:{{ response.results[5].climate }}</p>
+    <p >Численность:{{ response.results[5].population }}</p>
+    <p>Жители:</p>
+    <div *ngIf="asd" class = "people-card"></div>
+     <p>{{ this.asd.results[0].name }}</p>
+     <p>{{ this.asd.results[1].name }}</p>
+     <p>{{ this.asd.results[2].name }}</p>
+     <p>{{ this.asd.results[3].name }}</p>
+     <p>{{ this.asd.results[4].name }}</p>
+     <p>{{ this.asd.results[5].name }}</p>
+     
+  </div>
+  <div *ngIf="response" class = "planet-card">
+    <p class = "planet">{{ response.results[6].name }}</p>
+    <p >Диаметр:{{ response.results[6].diameter }}</p>
+    <p >Период вращения:{{ response.results[6].rotation_period }}</p>
+    <p >Климат:{{ response.results[6].climate }}</p>
+    <p >Численность:{{ response.results[6].population }}</p>
+    <p>Жители:</p>
+    <div *ngIf="asd" class = "people-card"></div>
+     <p>{{ this.asd.results[0].name }}</p>
+     <p>{{ this.asd.results[1].name }}</p>
+     <p>{{ this.asd.results[2].name }}</p>
+     <p>{{ this.asd.results[3].name }}</p>
+     <p>{{ this.asd.results[4].name }}</p>
+     <p>{{ this.asd.results[5].name }}</p>
+     
+  </div>
+  <div *ngIf="response" class = "planet-card">
+    <p class = "planet">{{ response.results[7].name }}</p>
+    <div *ngIf="asd" class = "people-card"></div>
+     <p>{{ this.asd.results[0].name }}</p>
+     <p>{{ this.asd.results[1].name }}</p>
+     <p>{{ this.asd.results[2].name }}</p>
+     <p>{{ this.asd.results[3].name }}</p>
+     <p>{{ this.asd.results[4].name }}</p>
+     <p>{{ this.asd.results[5].name }}</p>
+     
+  </div>
+</div>
+
+
+
